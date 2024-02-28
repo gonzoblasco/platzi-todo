@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/platzi-todo/static/css/main.e3dad2b1.css",
+    "main.js": "/platzi-todo/static/js/main.b9115332.js",
+    "static/js/364.e7d9f2fe.chunk.js": "/platzi-todo/static/js/364.e7d9f2fe.chunk.js",
+    "index.html": "/platzi-todo/index.html",
+    "static/media/delete.svg": "/platzi-todo/static/media/delete.7018c4465589031bd51c8efbe21df9ca.svg",
+    "static/media/check.svg": "/platzi-todo/static/media/check.e9a948bba52a34123d2ed7aeda0ea495.svg",
+    "main.e3dad2b1.css.map": "/platzi-todo/static/css/main.e3dad2b1.css.map",
+    "main.b9115332.js.map": "/platzi-todo/static/js/main.b9115332.js.map",
+    "364.e7d9f2fe.chunk.js.map": "/platzi-todo/static/js/364.e7d9f2fe.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3dad2b1.css",
+    "static/js/main.b9115332.js"
+  ]
+}
