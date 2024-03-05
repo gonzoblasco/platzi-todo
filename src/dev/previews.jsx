@@ -3,7 +3,6 @@ import { PaletteTree } from './palette'
 import App from '../App'
 import { TodoSearch } from '../TodoSearch'
 import { TodoItem } from '../TodoItem'
-import { AppUI } from '../App/AppUI'
 
 const ComponentPreviews = () => {
   return (
@@ -18,10 +17,6 @@ const ComponentPreviews = () => {
       <ComponentPreview
         path="/TodoItem">
         <TodoItem/>
-      </ComponentPreview>
-      <ComponentPreview
-        path="/AppUI">
-        <AppUI/>
       </ComponentPreview>
     </Previews>
   )
