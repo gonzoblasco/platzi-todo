@@ -1,8 +1,8 @@
 import React from 'react';
 import './TodoForm.css';
 
-function TodoForm({ addTodo, setOpenModal }) {
-  const [newTodoValue, setNewTodoValue] = React.useState('');
+function TodoForm({ addTodo, setOpenModal, editTodo, existingTodo }) {
+  const [newTodoValue, setNewTodoValue] = React.useState(existingTodo ? existingTodo.text : '');
 
   const onChange = (event) => {
     setNewTodoValue(event.target.value);
@@ -12,17 +12,21 @@ function TodoForm({ addTodo, setOpenModal }) {
   };
   const onSubmit = (event) => {
     event.preventDefault();
-    addTodo(newTodoValue);
+    if (existingTodo) {
+      editTodo(existingTodo.text, newTodoValue);
+    } else {
+      addTodo(newTodoValue);
+    }
     setOpenModal(false);
   };
 
   return (
     <form onSubmit={onSubmit}>
-      <label>Escribe tu nuevo TODO</label>
+      <label>{existingTodo ? 'Edita tu TODO' : 'Escribe tu nuevo TODO'}</label>
       <textarea
         value={newTodoValue}
         onChange={onChange}
-        placeholder="Cortar la cebolla oara el almuerzo"
+        placeholder="Cortar la cebolla para el almuerzo"
       />
       <div className="TodoForm-buttonContainer">
         <button
@@ -36,7 +40,7 @@ function TodoForm({ addTodo, setOpenModal }) {
           type="submit"
           className="TodoForm-button TodoForm-button--add"
         >
-          Añadir
+          {existingTodo ? 'Editar' : 'Añadir'}
         </button>
       </div>
     </form>

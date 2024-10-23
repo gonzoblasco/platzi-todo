@@ -11,7 +11,7 @@ import { EmptyTodos } from '../EmptyTodos';
 import { TodoForm } from '../TodoForm';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
-// import { ChangeAlert } from '../ChangeAlert';
+import { ChangeAlert } from '../ChangeAlert';
 
 function App() {
   const {
@@ -80,9 +80,9 @@ function App() {
         setOpenModal={setOpenModal}
       />
 
-      {/*<ChangeAlert*/}
-      {/*  sincronize={sincronizeTodos}*/}
-      {/*/>*/}
+      <ChangeAlert
+        sincronize={sincronizeTodos}
+      />
     </React.Fragment>
   );
 }
