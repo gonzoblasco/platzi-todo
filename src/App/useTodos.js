@@ -50,6 +50,13 @@ function useTodos() {
     saveTodos(newTodos);
   };
 
+  const editTodo = (oldText, newText) => {
+    const todoIndex = todos.findIndex(todo => todo.text === oldText);
+    const newTodos = [...todos];
+    newTodos[todoIndex].text = newText;
+    saveTodos(newTodos);
+  };
+
   return {
     loading,
     error,
@@ -61,6 +68,7 @@ function useTodos() {
     addTodo,
     completeTodo,
     deleteTodo,
+    editTodo,
     openModal,
     setOpenModal,
     sincronizeTodos,
